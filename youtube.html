@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>YouTube 클론</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <!-- 헤더 영역 -->
+        <header class="header">
+            <div class="header-left">
+                <div class="menu-icon-container">
+                    <!-- 메뉴 아이콘 영역 -->
+                    <div class="menu-icon"></div>
+                </div>
+                <div class="logo-container">
+                    <!-- 유튜브 로고 영역 -->
+                    <div class="youtube-logo">YouTube</div>
+                </div>
+            </div>
+
+            <div class="header-center">
+                <div class="search-container">
+                    <input
+                        type="text"
+                        class="search-input"
+                        placeholder="검색"
+                    />
+                    <button class="search-button">
+                        <!-- 검색 아이콘 영역 -->
+                        <div class="search-icon"></div>
+                    </button>
+                </div>
+                <div class="mic-button">
+                    <!-- 마이크 아이콘 영역 -->
+                    <div class="mic-icon"></div>
+                </div>
+            </div>
+
+            <div class="header-right">
+                <div class="create-icon"></div>
+                <div class="notifications-icon"></div>
+                <div class="profile-icon"></div>
+            </div>
+        </header>
+
+        <!-- 메인 컨테이너 -->
+        <div class="main-container">
+            <!-- 사이드바 영역 -->
+            <aside class="sidebar">
+                <div class="sidebar-section">
+                    <div class="sidebar-item active">
+                        <div class="sidebar-icon"></div>
+                        <span>홈</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <div class="sidebar-icon"></div>
+                        <span>Shorts</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <div class="sidebar-icon"></div>
+                        <span>구독</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <div class="sidebar-icon"></div>
+                        <span>YouTube Music</span>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <div class="sidebar-item">
+                        <div class="sidebar-icon"></div>
+                        <span>보관함</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <div class="sidebar-icon"></div>
+                        <span>시청 기록</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <div class="sidebar-icon"></div>
+                        <span>내 동영상</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <div class="sidebar-icon"></div>
+                        <span>나중에 볼 동영상</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <div class="sidebar-icon"></div>
+                        <span>좋아요 표시한 동영상</span>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>구독</h3>
+                    <div class="sidebar-item">
+                        <div class="channel-icon"></div>
+                        <span>채널 1</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <div class="channel-icon"></div>
+                        <span>채널 2</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <div class="channel-icon"></div>
+                        <span>채널 3</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <div class="channel-icon"></div>
+                        <span>채널 4</span>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>탐색</h3>
+                    <div class="sidebar-item">
+                        <div class="sidebar-icon"></div>
+                        <span>인기 급상승</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <div class="sidebar-icon"></div>
+                        <span>쇼핑</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <div class="sidebar-icon"></div>
+                        <span>음악</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <div class="sidebar-icon"></div>
+                        <span>영화</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <div class="sidebar-icon"></div>
+                        <span>게임</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <div class="sidebar-icon"></div>
+                        <span>스포츠</span>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- 콘텐츠 영역 -->
+            <main class="content">
+                <!-- 태그 필터 영역 -->
+                <div class="tags-container">
+                    <button class="tag active">전체</button>
+                    <button class="tag">음악</button>
+                    <button class="tag">실시간</button>
+                    <button class="tag">게임</button>
+                    <button class="tag">뉴스</button>
+                    <button class="tag">요리</button>
+                    <button class="tag">최근에 업로드된 동영상</button>
+                    <button class="tag">감상한 동영상</button>
+                    <button class="tag">새로운 맞춤 동영상</button>
+                </div>
+
+                <!-- 동영상 그리드 -->
+                <div class="videos-grid">
+                    <!-- 동영상 카드 반복 -->
+                    <!-- 동영상 1 -->
+                    <div class="video-card">
+                        <div class="thumbnail-container">
+                            <div class="thumbnail"></div>
+                            <div class="video-duration">10:30</div>
+                        </div>
+                        <div class="video-info">
+                            <div class="channel-avatar"></div>
+                            <div class="video-details">
+                                <h3 class="video-title">
+                                    유튜브 클론코딩 완성하기
+                                </h3>
+                                <p class="channel-name">개발자 채널</p>
+                                <p class="video-stats">
+                                    조회수 100만회 • 1주 전
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 동영상 2 -->
+                    <div class="video-card">
+                        <div class="thumbnail-container">
+                            <div class="thumbnail"></div>
+                            <div class="video-duration">15:20</div>
+                        </div>
+                        <div class="video-info">
+                            <div class="channel-avatar"></div>
+                            <div class="video-details">
+                                <h3 class="video-title">
+                                    HTML과 CSS 기초부터 배우기
+                                </h3>
+                                <p class="channel-name">웹개발 강좌</p>
+                                <p class="video-stats">
+                                    조회수 50만회 • 2주 전
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 동영상 3 -->
+                    <div class="video-card">
+                        <div class="thumbnail-container">
+                            <div class="thumbnail"></div>
+                            <div class="video-duration">22:15</div>
+                        </div>
+                        <div class="video-info">
+                            <div class="channel-avatar"></div>
+                            <div class="video-details">
+                                <h3 class="video-title">
+                                    프론트엔드 개발자 로드맵
+                                </h3>
+                                <p class="channel-name">코딩 채널</p>
+                                <p class="video-stats">
+                                    조회수 80만회 • 1개월 전
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 동영상 4 -->
+                    <div class="video-card">
+                        <div class="thumbnail-container">
+                            <div class="thumbnail"></div>
+                            <div class="video-duration">8:45</div>
+                        </div>
+                        <div class="video-info">
+                            <div class="channel-avatar"></div>
+                            <div class="video-details">
+                                <h3 class="video-title">
+                                    반응형 웹사이트 만들기
+                                </h3>
+                                <p class="channel-name">디자인 스튜디오</p>
+                                <p class="video-stats">
+                                    조회수 120만회 • 3주 전
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 동영상 5 -->
+                    <div class="video-card">
+                        <div class="thumbnail-container">
+                            <div class="thumbnail"></div>
+                            <div class="video-duration">14:30</div>
+                        </div>
+                        <div class="video-info">
+                            <div class="channel-avatar"></div>
+                            <div class="video-details">
+                                <h3 class="video-title">
+                                    JavaScript 완전 정복
+                                </h3>
+                                <p class="channel-name">JS 마스터</p>
+                                <p class="video-stats">
+                                    조회수 65만회 • 2개월 전
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 동영상 6 -->
+                    <div class="video-card">
+                        <div class="thumbnail-container">
+                            <div class="thumbnail"></div>
+                            <div class="video-duration">20:10</div>
+                        </div>
+                        <div class="video-info">
+                            <div class="channel-avatar"></div>
+                            <div class="video-details">
+                                <h3 class="video-title">
+                                    웹사이트 UI/UX 디자인 팁
+                                </h3>
+                                <p class="channel-name">디자인 연구소</p>
+                                <p class="video-stats">
+                                    조회수 45만회 • 2주 전
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 동영상 7 -->
+                    <div class="video-card">
+                        <div class="thumbnail-container">
+                            <div class="thumbnail"></div>
+                            <div class="video-duration">12:55</div>
+                        </div>
+                        <div class="video-info">
+                            <div class="channel-avatar"></div>
+                            <div class="video-details">
+                                <h3 class="video-title">
+                                    React와 함께하는 웹개발
+                                </h3>
+                                <p class="channel-name">프론트엔드 개발자</p>
+                                <p class="video-stats">
+                                    조회수 70만회 • 3개월 전
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 동영상 8 -->
+                    <div class="video-card">
+                        <div class="thumbnail-container">
+                            <div class="thumbnail"></div>
+                            <div class="video-duration">18:40</div>
+                        </div>
+                        <div class="video-info">
+                            <div class="channel-avatar"></div>
+                            <div class="video-details">
+                                <h3 class="video-title">
+                                    CSS 그리드 시스템 마스터하기
+                                </h3>
+                                <p class="channel-name">CSS 전문가</p>
+                                <p class="video-stats">
+                                    조회수 55만회 • 1개월 전
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>
