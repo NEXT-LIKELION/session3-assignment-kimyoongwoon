@@ -1,0 +1,397 @@
+/* 기본 스타일 리셋 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", Arial, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #030303;
+}
+
+/* 헤더 스타일 */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    z-index: 100;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.menu-icon-container {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.menu-icon {
+    width: 18px;
+    height: 2px;
+    background-color: #606060;
+    position: relative;
+}
+
+.menu-icon:before,
+.menu-icon:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #606060;
+}
+
+.menu-icon:before {
+    top: -5px;
+}
+
+.menu-icon:after {
+    bottom: -5px;
+}
+
+.youtube-logo {
+    color: #ff0000;
+    font-weight: bold;
+    font-size: 15px;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.header-center {
+    display: flex;
+    align-items: center;
+    flex: 0 1 428px;
+}
+
+.search-container {
+    display: flex;
+    height: 30px;
+    flex: 1;
+}
+
+.search-input {
+    flex: 1;
+    height: 100%;
+    padding: 0 12px;
+    border: 1px solid #ccc;
+    border-radius: 2px 0 0 2px;
+    font-size: 10px;
+}
+
+.search-button {
+    width: 32px;
+    height: 100%;
+    border: 1px solid #ccc;
+    border-left: none;
+    border-radius: 0 2px 2px 0;
+    background-color: #f8f8f8;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-icon {
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border: 2px solid #606060;
+    border-radius: 50%;
+    position: relative;
+}
+
+.search-icon:after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 2px;
+    background-color: #606060;
+    transform: rotate(45deg);
+    bottom: -3px;
+    right: -3px;
+}
+
+.mic-button {
+    width: 30px;
+    height: 30px;
+    margin-left: 8px;
+    background-color: #f9f9f9;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.mic-icon {
+    width: 12px;
+    height: 15px;
+    background-color: #606060;
+    border-radius: 12px 12px 4px 4px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.create-icon,
+.notifications-icon,
+.profile-icon {
+    width: 30px;
+    height: 30px;
+    margin-left: 8px;
+    border-radius: 50%;
+    background-color: #e5e5e5;
+    cursor: pointer;
+}
+
+/* 메인 컨테이너 스타일 */
+.main-container {
+    display: flex;
+    margin-top: 56px; /* 헤더 높이와 동일 */
+    height: calc(100vh - 56px);
+}
+
+/* 사이드바 스타일 - 절반 크기로 조정 */
+.sidebar {
+    position: fixed;
+    width: 160px;
+    height: calc(100vh - 56px);
+    background-color: white;
+    overflow-y: auto;
+    z-index: 10;
+    padding: 12px 0;
+}
+
+.sidebar-section {
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.sidebar-section:last-child {
+    border-bottom: none;
+}
+
+.sidebar-section h3 {
+    padding: 8px 12px; /* 24px에서 12px로 줄임 */
+    font-size: 14px;
+    font-weight: 500;
+    color: #606060;
+}
+
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px; /* 24px에서 12px로 줄임 */
+    cursor: pointer;
+    height: 40px;
+}
+
+.sidebar-item:hover {
+    background-color: #f2f2f2;
+}
+
+.sidebar-item.active {
+    background-color: #e5e5e5;
+}
+
+.sidebar-icon,
+.channel-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px; /* 24px에서 12px로 줄임 */
+    background-color: #909090;
+    border-radius: 50%;
+}
+
+.sidebar-item span {
+    font-size: 12px; /* 14px에서 12px로 줄임 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* 콘텐츠 영역 스타일 */
+.content {
+    margin-left: 160px; /* 사이드바 너비와 동일하게 조정 */
+    width: calc(100% - 120px);
+    padding: 24px 24px 0;
+}
+
+/* 태그 필터 스타일 */
+.tags-container {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 12px;
+    margin-bottom: 24px;
+}
+
+.tags-container::-webkit-scrollbar {
+    display: none;
+}
+
+.tag {
+    white-space: nowrap;
+    background-color: #f2f2f2;
+    border: 1px solid #e5e5e5;
+    border-radius: 16px;
+    padding: 8px 12px;
+    margin-right: 12px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.tag.active {
+    background-color: #030303;
+    color: white;
+}
+
+/* 동영상 그리드 스타일 */
+.videos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.video-card {
+    cursor: pointer;
+}
+
+.thumbnail-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 56.25%; /* 16:9 비율 */
+    margin-bottom: 12px;
+}
+
+.thumbnail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #e5e5e5;
+    border-radius: 12px;
+}
+
+.video-duration {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 3px 4px;
+    border-radius: 2px;
+    font-size: 12px;
+}
+
+.video-info {
+    display: flex;
+}
+
+.channel-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #e5e5e5;
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+
+.video-details {
+    flex: 1;
+}
+
+.video-title {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 6px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.channel-name,
+.video-stats {
+    font-size: 14px;
+    color: #606060;
+    margin-bottom: 4px;
+}
+
+/* 반응형 디자인 - 수정된 부분 */
+@media (min-width: 1312px) {
+    .videos-grid {
+        grid-template-columns: repeat(5, 1fr); /* 1312px 이상에서 5개 컬럼 */
+    }
+}
+
+@media (max-width: 1311px) and (min-width: 1097px) {
+    .videos-grid {
+        grid-template-columns: repeat(4, 1fr); /* 1311px~1097px에서 4개 컬럼 */
+    }
+}
+
+@media (max-width: 1096px) and (min-width: 889px) {
+    .videos-grid {
+        grid-template-columns: repeat(3, 1fr); /* 1096px~889px에서 3개 컬럼 */
+    }
+}
+
+@media (max-width: 888px) and (min-width: 657px) {
+    .videos-grid {
+        grid-template-columns: repeat(2, 1fr); /* 888px~657px에서 2개 컬럼 */
+    }
+
+    .sidebar {
+        width: 72px;
+    }
+
+    .sidebar-item span,
+    .sidebar-section h3 {
+        display: none;
+    }
+
+    .sidebar-icon,
+    .channel-icon {
+        margin-right: 0;
+    }
+
+    .content {
+        margin-left: 72px;
+        width: calc(100% - 72px);
+    }
+
+    .sidebar-item {
+        justify-content: center;
+        padding: 8px 0;
+    }
+}
+
+@media (max-width: 656px) {
+    .videos-grid {
+        grid-template-columns: 1fr; /* 656px 이하에서 1개 컬럼 */
+    }
+
+    .header-center {
+        flex: 0 1 300px;
+    }
+}
